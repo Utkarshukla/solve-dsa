@@ -162,6 +162,26 @@ public class RecurrsionPractice {
 	    int include = sumOfSubsets(A, index + 1, currentSum + A[index]);
 	    return include + exclude;
 	}
+	
+	
+	public static void printPermutations(char[] s, int index) {
+        if (index == s.length) {
+            System.out.println(new String(s));
+            return;
+        }
+
+        for (int i = index; i < s.length; i++) {
+            swap(s, i, index);
+            printPermutations(s, index + 1);
+            swap(s, i, index); // backtrack (original order)
+        }
+    }
+
+    private static void swap(char[] s, int i, int j) {
+        char temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
+    }
 
 
 
@@ -196,6 +216,10 @@ public class RecurrsionPractice {
 		int[] A = {1, 2};
 		int total = sumOfSubsets(A, 0, 0);
 		System.out.println(total +" sum of subsets"); // Output: 6
+		
+		
+		// permutations of string
+		  printPermutations("abc".toCharArray(), 0);
 
 	
 	}

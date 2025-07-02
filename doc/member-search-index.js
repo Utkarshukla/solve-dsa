@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"dsa.Math","c":"PalindromeNumber","l":"isPalindromeNum(int)"},{"p":"dsa.Math","c":"PalindromeNumber","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"dsa.Math","c":"PalindromeNumber","l":"PalindromeNumber()","u":"%3Cinit%3E()"}];updateSearchResults();
